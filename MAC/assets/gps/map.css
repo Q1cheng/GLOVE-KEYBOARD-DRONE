@@ -1,0 +1,39 @@
+:root { color-scheme: dark; font-family: -apple-system, BlinkMacSystemFont, sans-serif; color: #e8f0f2; background: #03080b; }
+* { box-sizing: border-box; }
+html, body, #map { margin: 0; height: 100%; width: 100%; overflow: hidden; }
+#map { background: #03080b; }
+.leaflet-container { font: inherit; }
+.leaflet-tile-pane { filter: brightness(.73) saturate(.77); }
+body.tiles-unavailable .leaflet-tile-pane { visibility: hidden; }
+.title { position: absolute; z-index: 800; top: 0; left: 0; width: 59%; height: 25px; padding: 5px 11px 5px 31px; background: #081116e8; border-radius: 0 0 3px 0; font-size: 11px; }
+.title-icon { position: absolute; left: 11px; top: 5px; width: 14px; height: 14px; fill: #4ed4de; }
+.heading-display { position: absolute; z-index: 800; top: 12px; right: 12px; width: 78px; text-align: center; }
+.compass { height: 78px; width: 78px; border: 1px solid #82949d; border-radius: 50%; background: #081116eb; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1px; }
+#heading-arrow { height: 32px; width: 24px; fill: #4ed4de; transform-origin: center; visibility: hidden; }
+#cardinal { color: #4ed4de; height: 18px; line-height: 18px; font-size: 13px; }
+#degrees { display: inline-block; min-width: 44px; background: #081116e8; border-radius: 2px; padding: 2px 5px; font-size: 13px; font-variant-numeric: tabular-nums; }
+.home-readings { position: absolute; z-index: 800; bottom: 24px; left: 9px; display: grid; grid-template-columns: 66px 68px; align-items: baseline; gap: 4px 3px; background: #081116e8; padding: 7px 8px; border-radius: 3px; }
+.home-readings span { color: #bac8ce; font-size: 10px; }
+.home-readings output { text-align: right; font-size: 15px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+#scale { position: absolute; z-index: 800; right: 9px; bottom: 24px; padding: 7px 10px 8px; background: #081116e8; border-radius: 3px; }
+.scale-labels { position: relative; height: 17px; font-size: 10px; white-space: nowrap; }
+.scale-labels span { position: absolute; }
+.scale-labels span:nth-child(2) { left: 50%; transform: translateX(-50%); }
+.scale-labels span:last-child { right: 0; }
+.scale-line { height: 7px; border: 1px solid #bac8ce; border-top: 0; position: relative; }
+.scale-line i { position: absolute; height: 6px; left: 50%; bottom: 0; border-left: 1px solid #bac8ce; }
+#availability { position: absolute; z-index: 850; left: 10px; top: 35px; max-width: calc(100% - 110px); padding: 6px 10px; border-radius: 3px; background: #081116ee; color: #e9b65e; font-size: 10px; line-height: 17px; white-space: pre-line; pointer-events: none; }
+#availability:empty { display: none; }
+.drone-icon { background: none; border: none; }
+.drone-halo { width: 70px; height: 70px; background: #20b9d329; border-radius: 50%; display: flex; justify-content: center; align-items: center; }
+.drone-arrow { width: 25px; height: 33px; fill: #4ed4de; filter: drop-shadow(0 1px 1px #071b23); transform-origin: center; }
+.position-dot { width: 9px; height: 9px; border: 2px solid #4ed4de; border-radius: 50%; }
+.leaflet-control-attribution { max-width: 100%; font-size: 8px !important; line-height: 11px; background: #081116e8 !important; color: #bac8ce !important; }
+.leaflet-control-attribution a { color: #bac8ce !important; }
+.leaflet-bottom.leaflet-right { width: 100%; }
+.leaflet-control-attribution .esri-dynamic-attribution { white-space: normal !important; }
+@media (max-width: 380px) {
+  .heading-display, .compass { width: 66px; } .compass { height: 66px; }
+  .home-readings { grid-template-columns: 59px 55px; padding: 6px; }
+  .home-readings output { font-size: 13px; }
+}

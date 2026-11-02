@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flight Deck GPS</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="vendor/leaflet.css">
+  <link rel="stylesheet" href="map.css">
+</head>
+<body>
+  <div id="map" aria-label="North-up satellite map"></div>
+  <div class="title"><svg class="title-icon" viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="22" rx="6" ry="2"/><path fill-rule="evenodd" d="M12 1a8 8 0 0 0-8 8c0 5 8 10 8 10s8-5 8-10a8 8 0 0 0-8-8Zm0 4a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"/></svg>GPS / MAP</div>
+  <div id="availability" role="status">POSITION UNAVAILABLE</div>
+  <div class="heading-display">
+    <div class="compass">
+      <svg id="heading-arrow" viewBox="0 0 24 32" aria-label="Nose heading"><path d="M12 1 23 30 12 24 1 30Z"/></svg>
+      <span id="cardinal">--</span>
+    </div>
+    <output id="degrees">--</output>
+  </div>
+  <div class="home-readings">
+    <span>DISTANCE</span><output id="distance">--</output>
+    <span>BEARING</span><output id="bearing">--</output>
+  </div>
+  <div id="scale" hidden>
+    <div class="scale-labels"><span>0</span><span id="scale-mid"></span><span id="scale-end"></span></div>
+    <div class="scale-line"><i></i></div>
+  </div>
+  <script src="vendor/leaflet.js"></script>
+  <script src="vendor/esri-leaflet.js"></script>
+  <script src="map.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+{
+  "additionalFiles": "",
+  "compiler.optimization_flags": "-Os",
+  "customBuildProperties": "",
+  "fqbn": "esp32:esp32:esp32s3",
+  "hardwareFolders": "/Users/macbookpro/Library/Arduino15/packages/esp32/hardware/esp32/3.3.11,/Users/macbookpro/Library/Arduino15/packages/esp32/hardware/esp32/3.3.11",
+  "otherLibrariesFolders": "/Users/macbookpro/Documents/Arduino/libraries",
+  "sketchLocation": "/Users/macbookpro/Desktop/DRONE_SOFTWARE/ESP32_AIR"
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Flight Deck Attitude</title>
+  <link rel="stylesheet" href="scene.css">
+  <script>window.errors=[];addEventListener('error',e=>{window.errors.push(e.message);document.getElementById('model-error').textContent='3D RENDERER UNAVAILABLE';});</script>
+</head>
+<body>
+  <main>
+    <section id="stage" aria-label="Drone attitude model">
+      <canvas id="scene"></canvas>
+      <div class="forward">FWD<svg viewBox="0 0 20 30"><path d="M10 28V4m-5 6 5-7 5 7"/></svg></div>
+      <div class="motor front left">M1<span>FRONT LEFT</span><b class="cyan">CW</b></div>
+      <div class="motor front right">M3<span>FRONT RIGHT</span><b class="amber">CCW</b></div>
+      <div class="motor rear left">M2<span>REAR LEFT</span><b class="amber">CCW</b></div>
+      <div class="motor rear right">M4<span>REAR RIGHT</span><b class="cyan">CW</b></div>
+      <div id="model-error" role="status"></div>
+    </section>
+    <aside>
+      <canvas id="axes" width="104" height="68" aria-label="Body axes: X forward, Y left, Z up"></canvas>
+      <div class="heading">ATTITUDE (deg)</div>
+      <div class="reading"><span>Pitch</span><output id="pitch">--</output></div>
+      <div class="reading"><span>Roll</span><output id="roll">--</output></div>
+      <div class="reading"><span>Yaw</span><output id="yaw">--</output></div>
+    </aside>
+  </main>
+  <script type="module" src="scene.js"></script>
+</body>
+</html>

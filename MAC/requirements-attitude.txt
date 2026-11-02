@@ -1,0 +1,2 @@
+# Native WebKit bridge for the embedded local Three.js attitude panel.
+pyobjc-framework-WebKit==12.2.2
